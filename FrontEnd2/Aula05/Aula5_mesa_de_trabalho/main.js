@@ -21,8 +21,8 @@ document.body.appendChild(botao)
  function darkMode() {
      var bod = document.body
      bod.classList.toggle("dark-body")
-     var tit = document.getElementById("titulo")
-     tit.classList.toggle("dark-titulo")
+    //  var tit = document.getElementById("titulo")
+    //  tit.classList.toggle("dark-titulo")
     //  var itens = document.getElementsByClassName("item")
     //  itens.classList.toggle("item-dark")
   

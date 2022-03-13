@@ -48,14 +48,28 @@ h1 {
 /* ------------------------------ Estilos para o tema escuro (Dark-Mode) ----------------------------------------------- */
  
 /* 
+
+
 // A cor de fundo  */
+  button {
+    
+    font-size: 16px;
+    border: 0;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
+
 
   .dark-body{
     background-color: rgb(39, 39, 39);
   }
 
   /* // Modificações no titulo 'A família dos felinos' */
-  .dark-titulo{ 
+  .dark-body h1{ 
     background-color: rgb(19, 19, 19);
     color: rgb(170, 170, 170);
     border-color: black;
@@ -63,12 +77,12 @@ h1 {
 
 
   /* // Modificações nos items */
-  .item-dark{
+  .dark-body .item {
     background-color: rgb(19, 19, 19);
     border-color: black;
   }
 
   /* // Modificações nos textos dos itens e cabeçalhos dos itens */
-  .item-darkh{
+  .dark-body .item h2, .dark-body .item p{
     color: rgb(230, 230, 230);
   }
