@@ -13,6 +13,8 @@ body{
 
 .postagem-formulario{
     padding-left: 20px;
+    border: red solid 3px;
+    border-radius: 12px;
 }
 
 h1{
@@ -21,7 +23,7 @@ h1{
     padding-left: 20px;
 }
 
-.info{
+#titulo, #descricao, #imagem{
     border-radius: 12px;
     width: 200px;
     height: 30px;
@@ -35,7 +37,7 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 120px;
+    padding-right: 20px;
     
 }
 
@@ -43,16 +45,20 @@ h1{
     width: 140px;
     height: 50px;
     border-radius: 12px;
-    
+    cursor: pointer;
 }
 
 .container{
     padding-left: 20px;
     padding-top: 20px;
     color: white;
-    
+    border: red solid 3px;
+}
+
+.postagem{
+    border: red solid 3px;
 }
 
 .titulo-postagem{
-    text-align: center;
+    /* text-align: center; */
 }

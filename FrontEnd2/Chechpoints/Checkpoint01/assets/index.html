@@ -8,25 +8,28 @@
     <title>Posta Foto</title>
 </head>
 <body>
-    <form action="" class="formulario">
+    <form class="formulario">
         <div class="postagem-formulario">
             <h1>Poste sua foto</h1>
-                <input type="text" class="info" placeholder="Teste">
-                <input type="text" class="info" placeholder="Descrição">
-                <input type="url" class="info" name="" id="" placeholder="URL Imagem">
+                <input type="text"  id="titulo" placeholder="Título" required>
+                <input type="text"  id="descricao" placeholder="Descrição" required>
+                <input type="url"   id="imagem" placeholder="https://exemplo.com" pattern="https://.*" required>
             <div class="botao-contorno">
                 
-                <button class="botao">Enviar</button>
+                <button class="botao" type="submit" onclick=" enviar()">Enviar</button>
             </div>
         </div>
     </form>
     <div class="container">
         <section class="postagem">
-            <div class="cartao-postagem">            
-                <img src="https://th.bing.com/th/id/OIP.GAGep8RkTXncfABm23nE-gHaEa?pid=ImgDet&rs=1" alt="" class="imagem-postagem">
-                <h2 class="titulo-postagem">Titulo</h2>
-                <p class="descricao-postagem">asdasd</p>
-            </div>
+           
+            <img src="" alt="">
+            <h1></h1>
+            <p id="postagem"></p>
+
+            
+
+
         </section>
     </div>
     <script src="./main.js"></script>
