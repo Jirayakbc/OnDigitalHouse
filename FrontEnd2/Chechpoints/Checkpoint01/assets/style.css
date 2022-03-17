@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    border: 0;
+    
+}
+body{
+    background-color: rgba(26, 25, 25, 0.918);
+}
+.formulario{
+    color: white;
+
+}
+
+.postagem-formulario{
+    padding-left: 20px;
+}
+
+h1{
+    align-items: center;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.info{
+    border-radius: 12px;
+    width: 200px;
+    height: 30px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    
+}
+
+.botao-contorno{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 120px;
+    
+}
+
+.botao{
+    width: 140px;
+    height: 50px;
+    border-radius: 12px;
+    
+}
+
+.container{
+    padding-left: 20px;
+    padding-top: 20px;
+    color: white;
+    
+}
+
+.titulo-postagem{
+    text-align: center;
+}
