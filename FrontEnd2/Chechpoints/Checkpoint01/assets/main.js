@@ -20,12 +20,14 @@ function enviar(){
 //refeita inserção, está incluindo mas a imagem src não inclui, ele só altera a ultima
     function insere(){
         let posts = document.getElementById('postagem');
+        posts.innerHTML += [`<img src=${dados.foto}>
+        </img>`]
         posts.innerHTML += `<h2>${dados.titulo}</h2>`
         posts.innerHTML += `<p>${dados.descricao}</p>`
-        posts.innerHTML += `<img></img>`
-        let img = document.querySelector('img');
-        img.src = `${dados.foto}`
-        posts.innerHTML += img.src = "hackanm.gif";
+        
+        // let img = document.querySelector('img');
+        // img.src = `${dados.foto}`
+        // posts.innerHTML += img.src = "hackanm.gif";
     }
     insere()
 
