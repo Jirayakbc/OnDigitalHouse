@@ -1,6 +1,7 @@
 * {
     padding: 0;
     border: 0;
+    /* background-color: rgba(37, 36, 36, 0.808); */
     
 }
 body{
@@ -57,8 +58,11 @@ h1{
 
 .postagem{
     border: red solid 3px;
+   
 }
 
-.titulo-postagem{
-    /* text-align: center; */
+h2{
+    color: wheat;
+    font-size: xx-large;
+
 }

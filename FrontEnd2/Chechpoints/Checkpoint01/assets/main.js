@@ -1,23 +1,9 @@
 
-
-
-// const nome = document.querySelector("#titulo");
-// // const tituloNome = String(nome.value)
-// const descricao = document.querySelector("#descricao").value;
-// const url = document.querySelector("#imagem").value;
-
 const formulario = document.querySelector("form");
 formulario.addEventListener("submit", function(event) {
    event.preventDefault()
 })
 
-// const dados ={
-//     titulo: nome,
-//     descric: descricao,
-//     urlImagem: url
-// };
-
-//funcao onclick que vai ativar as postagens
 
 function enviar(){
     const nome = document.querySelector("#titulo").value;
@@ -29,31 +15,19 @@ function enviar(){
         foto: imagem.value,
         
     }
-    console.log(foto)
 
-    alert('Você clicou')
-
-    console.log(dados)
-
-    // let post = dados;
-    // post.titulo = document.getElementsByTagName('h1').innerHTML;
-    // post.descricao = document.getElementsByTagName('p').innerHTML;
-    // post.foto = document.getElementsByTagName('img').innerHTML;
-
+    alert('Confirma envio')
+//refeita inserção, está incluindo mas a imagem src não inclui, ele só altera a ultima
     function insere(){
-        var fotografia = document.getElementsByClassName('img')
-     fotografia.setAttribute('src', dados.foto);
+        let posts = document.getElementById('postagem');
+        posts.innerHTML += `<h2>${dados.titulo}</h2>`
+        posts.innerHTML += `<p>${dados.descricao}</p>`
+        posts.innerHTML += `<img></img>`
+        let img = document.querySelector('img');
+        img.src = `${dados.foto}`
+        posts.innerHTML += img.src = "hackanm.gif";
     }
     insere()
+
+
 }
-
-
-// //funcao de adicionar postagens
-
-
-// var input = document.querySelector("#name");
-
-// var texto = input.value;
-
-
-
