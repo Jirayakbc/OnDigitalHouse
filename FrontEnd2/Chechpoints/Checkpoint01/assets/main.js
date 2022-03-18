@@ -19,7 +19,7 @@ function enviar(){
     alert('Confirma envio')
 //refeita inserção, está incluindo mas a imagem src não inclui, ele só altera a ultima
     function insere(){
-        let posts = document.getElementById('postagem');
+        let posts = document.getElementById('post-cartao');
         posts.innerHTML += [`<img src=${dados.foto}>
         </img>`]
         posts.innerHTML += `<h2>${dados.titulo}</h2>`

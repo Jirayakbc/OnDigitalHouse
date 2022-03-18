@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     padding: 0;
     border: 0;
     /* background-color: rgba(37, 36, 36, 0.808); */
-    
+    font-family: 'Roboto', sans-serif;
 }
 body{
     background-color: rgba(26, 25, 25, 0.918);
+
 }
 .formulario{
     color: white;
@@ -16,6 +18,8 @@ body{
     padding-left: 20px;
     border: red solid 3px;
     border-radius: 12px;
+    
+
 }
 
 h1{
@@ -25,12 +29,20 @@ h1{
 }
 
 #titulo, #descricao, #imagem{
-    border-radius: 12px;
-    width: 200px;
-    height: 30px;
+    border-radius: 18px;
+    width: 380px;
+    height: 40px;
     letter-spacing: 1px;
-    padding-left: 20px;
     
+    
+}
+
+#titulo:hover, #descricao:hover, #imagem:hover{
+    border-radius: 0;
+    transform: scale(0.99);
+    background-color: rgba(20, 20, 20, 0.795);
+    color: white;
+
 }
 
 .botao-contorno{
@@ -39,6 +51,7 @@ h1{
     flex-direction: row;
     justify-content: flex-end;
     padding-right: 20px;
+
     
 }
 
@@ -47,6 +60,9 @@ h1{
     height: 50px;
     border-radius: 12px;
     cursor: pointer;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .container{
@@ -54,15 +70,106 @@ h1{
     padding-top: 20px;
     color: white;
     border: red solid 3px;
+
+}
+.input-wrapper{
+    /* display: flex; */
+        
 }
 
-.postagem{
-    border: red solid 3px;
-   
+
+
+#post-cartao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
 }
+
 
 h2{
     color: wheat;
     font-size: xx-large;
 
+}
+
+.card-deck{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+}
+
+
+/*teste estilização botão*/
+.botao {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.botao:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.botao:active {
+    color: #000
+}
+
+.botao:active:after {
+    background: transparent;
+}
+
+.botao:hover:before {
+    opacity: 1;
+}
+
+.botao:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/*
+@media screen {
+    //display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
 }
