@@ -40,11 +40,11 @@ function enviar(){
     // post.descricao = document.getElementsByTagName('p').innerHTML;
     // post.foto = document.getElementsByTagName('img').innerHTML;
 
-    function insere(){
-        var fotografia = document.getElementsByClassName('img')
-     fotografia.setAttribute('src', dados.foto);
-    }
-    insere()
+    // function insere(){
+    //     var fotografia = document.getElementsByClassName('img')
+    //  fotografia.setAttribute('src', dados.foto);
+    // }
+    // insere()
 }
 
 
