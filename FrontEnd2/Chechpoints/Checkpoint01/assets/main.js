@@ -1,34 +1,67 @@
+//funcao atalho select id
+function selecionarId(id){
+    return document.getElementById(id);
+}
 
-const formulario = document.querySelector("form");
+//funcao que confere se os campos estão com vazios ou sem espaco
+function vazio(input){
+    return input.value.trim() === "";
+}
+
+// funcao que envia mensagem de erro 
+function mensagemErro(mensagem){
+    listaErroUL.innerHTML += "<li>" + mensagem + "</li>"
+}
+
+//variavel que vai buscar o campo onde jogar os erros no form
+let listaErroUL = document.querySelector('.erros ul');
+
+//variavel que busca o formulario
+let formulario = document.querySelector("form");
+
+
+
+//manipulando as acoes do formulario
 formulario.addEventListener("submit", function(event) {
-   event.preventDefault()
+    event.preventDefault()  
+    //zerando lista de erros para não ficar gerando várias, uma em cima de outra
+    listaErroUL.innerHTML="";
+
+    if(vazio(titulo)){
+        mensagemErro("Campo Titulo nao preenchido")
+    }
+    if (vazio(descricao)){
+        listaErroUL.innerHTML += "<li>Campo descrição não preenchido</li>"
+    }
+    if(vazio(imagem)){
+        listaErroUL.innerHTML += "<li>Campo link da foto nao preenchido</li>"
+    }
+    if(!vazio(titulo) && !vazio(descricao) && !vazio(imagem)){
+
+        //funcao para inserir os campos do formulário abaixo na disposição correta
+        function insere(){
+
+            //necessário criar uma div para colocar os elementos dentro e organizar o layout
+            let dive = document.createElement('div');
+            dive.setAttribute('class', 'post-card')
+            document.getElementById('organiza-post').appendChild(dive);
+
+            //inserindo os campos do formulário item a item dentro da div recem criada
+            let posts = document.getElementById("organiza-post").appendChild(dive);
+
+            //inserção dos elementos na grid por ordem de img, titulo e descricao
+            posts.innerHTML += [`<img src=${imagem.value} > </img>`];
+            posts.innerHTML += `<h2>${titulo.value}</h2>`;
+            posts.innerHTML += `<p>${descricao.value}</p>`;   
+
+        }
+
+        //chamando a função de inserção
+        insere()
+    }
+    
+    //impede de atualizar a página ao clicar no submit, evitando a funcao original do submit
+   event.preventDefault()   
 })
 
-
-function enviar(){
-    const nome = document.querySelector("#titulo").value;
-    const descricao = document.querySelector("#descricao").value;
-    const foto = document.querySelector("#imagem").value;
-    let dados = {
-        titulo: nome,
-        descricao: descricao,
-        foto: imagem.value,
-        
-    }
-
-    alert('Confirma envio')
-//refeita inserção, está incluindo mas a imagem src não inclui, ele só altera a ultima
-    function insere(){
-        let posts = document.getElementById('post-cartao');
-        posts.innerHTML += [`<img src=${dados.foto} > </img>`];
-        posts.innerHTML += `<h2>${dados.titulo}</h2>`;
-        posts.innerHTML += `<p>${dados.descricao}</p>`;
-        
-        // let img = document.querySelector('img');
-        // img.src = `${dados.foto}`
-        // posts.innerHTML += img.src = "hackanm.gif";
-    }
-    insere()
-
-
-}
+    
