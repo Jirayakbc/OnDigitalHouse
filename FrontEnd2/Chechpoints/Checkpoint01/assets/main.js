@@ -23,17 +23,25 @@ let formulario = document.querySelector("form");
 
 //manipulando as acoes do formulario
 formulario.addEventListener("submit", function(event) {
-    event.preventDefault()  
+    event.preventDefault() 
+    
     //zerando lista de erros para não ficar gerando várias, uma em cima de outra
     listaErroUL.innerHTML="";
-
+    
+    //inserida a funcionalidade exibir ou não os erros dos campos
+    let exib = document.getElementById('erros');
+    exib.getAttribute('hidden')
+    
     if(vazio(titulo)){
+        exib.removeAttribute('hidden')
         mensagemErro("Campo Titulo nao preenchido")
     }
     if (vazio(descricao)){
+        exib.removeAttribute('hidden')
         listaErroUL.innerHTML += "<li>Campo descrição não preenchido</li>"
     }
     if(vazio(imagem)){
+        exib.removeAttribute('hidden')
         listaErroUL.innerHTML += "<li>Campo link da foto nao preenchido</li>"
     }
     if(!vazio(titulo) && !vazio(descricao) && !vazio(imagem)){
@@ -54,14 +62,17 @@ formulario.addEventListener("submit", function(event) {
             posts.innerHTML += `<h2>${titulo.value}</h2>`;
             posts.innerHTML += `<p>${descricao.value}</p>`;   
 
+
         }
 
-        //chamando a função de inserção
+        //chamando a função de inserção e voltando a ocultar a div de erros
         insere()
+        exib.setAttribute('hidden', 'true') 
     }
     
     //impede de atualizar a página ao clicar no submit, evitando a funcao original do submit
    event.preventDefault()   
+   
 })
 
     
