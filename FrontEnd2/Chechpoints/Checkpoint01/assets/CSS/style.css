@@ -71,6 +71,7 @@ h1{
 
 }
 
+<<<<<<< HEAD:FrontEnd2/Chechpoints/Checkpoint01/assets/CSS/style.css
 #titulo:focus, #descricao:focus, #imagem:focus{
     border-radius: 5px;
     background-color: rgba(20, 20, 20, 0.795);
@@ -79,6 +80,8 @@ h1{
 }
 
 
+=======
+>>>>>>> dfedd5d7ee53a39ae3b8b70515eeba65248eec1f:FrontEnd2/Chechpoints/Checkpoint01/assets/style.css
 
 
 /* parte de baixo */
@@ -139,10 +142,17 @@ img{
 }
 
 .post-card:hover{
+<<<<<<< HEAD:FrontEnd2/Chechpoints/Checkpoint01/assets/CSS/style.css
     transform: scale(1.05);
     border: white solid 1px;
     cursor: pointer;
     transition: 0.3s;
+=======
+    transform: scale(1.3);
+    border: white solid 1px;
+    cursor: pointer;
+    
+>>>>>>> dfedd5d7ee53a39ae3b8b70515eeba65248eec1f:FrontEnd2/Chechpoints/Checkpoint01/assets/style.css
 }
 
 h2{
