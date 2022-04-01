@@ -1,12 +1,12 @@
 <h1>Checkpoint de FrontEnd 2.</h1>
 <h2>Professor Ivin</h2>
 
-<h3>Grupo: Felipe Roberto Rocha, Joel Jarrys Farias e Alexandre Hosang Filho.</h3>
+<h3>Grupo: Felipe Roberto Rocha, Joel Jerrys Farias e Alexandre Hosang Filho.</h3>
 
 <h4>Tarefa é criar uma página com um formulário de inclusão de postagens com JavaScript</h4>
 
 Página para visualização:
-https://jirayakbc.github.io/OnDigitalHouse/FrontEnd2/Chechpoints/Checkpoint01/assets/index.html
+https://jirayakbc.github.io/OnDigitalHouse/FrontEnd2/Chechpoints/Checkpoint01/index.html
 
 
 Prévia da visão mobile: <br>
